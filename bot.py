@@ -56,7 +56,7 @@ def inline(client, message):
                      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Search Here", switch_inline_query_current_chat=""),InlineKeyboardButton("Go Inline", switch_inline_query="")]]),
                      description ="Help !!",
                      thumb_url="https://telegra.ph/file/99d8f16a777c2ee2781c1.jpg",
-                     input_message_content = InputTextMessageContent(disable_web_page_preview=1,message_text ="**Nothing Complicated..**🤓\n\nType `@ShareUrlBot your text` \nin any chats keyboard and hit the inline result.\n\nNote: __U can also use Me in PM!__"))
+                     input_message_content = InputTextMessageContent(message_text ="**Nothing Complicated..**🤓\n\nType `@ShareUrlBot your text` \nin any chats keyboard and hit the inline result.\n\nNote: __U can also use Me in PM!__"))
                 ] 
         message.answer(result) 
         return
@@ -66,8 +66,8 @@ def inline(client, message):
      rslt = f"""**Click to CopY⬇️⬇️** \n\n```{rpl}```"""
      result = [InlineQueryResultArticle(title = f'{query}',
                description =f'{rpl}',                        
-               reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Click to Try on This linK ⬆️⬆️', url=f'{rpl}')]]),
-               input_message_content = InputTextMessageContent(disable_web_page_preview=0,message_text = rslt))
+               reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Click to Try on This linK ⬆️⬆️', url=f'{rpl}')],InlineKeyboardMarkup([[InlineKeyboardButton("Search Again", switch_inline_query_current_chat=""),InlineKeyboardButton("Go Inline", switch_inline_query="")]]),
+               input_message_content = InputTextMessageContent(message_text = rslt))
               ]
   
   message.answer(result)
