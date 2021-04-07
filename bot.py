@@ -1,11 +1,6 @@
-from pyrogram import Client, filters
-from pyrogram.types import (
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    InlineQueryResultArticle,
-    InputTextMessageContent
-)
 import urllib
+from pyrogram import Client, filters
+from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultArticle, InputTextMessageContent)
 from config import Config
 
 bot = Client(
@@ -22,18 +17,7 @@ def start(client, message):
     message.reply_text(
         text=rep, 
         quote=False,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton('SOURCE', url='https://github.com/ashkar2001')
-                ],
-                [
-                    InlineKeyboardButton("Search Here", switch_inline_query_current_chat=""),InlineKeyboardButton("Go Inline", switch_inline_query="")
-                ]
-            ]
-        )
-    )
-
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('SOURCE', url='https://github.com/ashkar2001')],[InlineKeyboardButton("Search Here", switch_inline_query_current_chat=""),InlineKeyboardButton("Go Inline", switch_inline_query="")]]))
 
 @bot.on_message(filters.command(['help']))
 def help(client, message):
@@ -45,7 +29,7 @@ def about(client, message):
 **My Name** :- `Share Url Generator`
 **Creator** :- @B_woy
 **Language** :- `Python3`
-**Library** :- `Pyrogram 1.2.5`
+**Library** :- `Pyrogram 1.2.8`
 **Server** :- `Heroku.com`
 **Build Status** :- `V 0.2`
 
@@ -72,11 +56,11 @@ def inline(client, message):
                      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Search Here", switch_inline_query_current_chat=""),InlineKeyboardButton("Go Inline", switch_inline_query="")]]),
                      description ="Help !!",
                      thumb_url="https://telegra.ph/file/99d8f16a777c2ee2781c1.jpg",
-                     input_message_content = InputTextMessageContent(disable_web_page_preview=1,message_text ="**Nothing Complicated..**🤓\n\nType `@ShareUrlBot your text` in any chats keyboard and hit the inline result.\n\nNote: __U can also use Me in PM!__"))
+                     input_message_content = InputTextMessageContent(disable_web_page_preview=1,message_text ="**Nothing Complicated..**🤓\n\nType `@ShareUrlBot your text` \nin any chats keyboard and hit the inline result.\n\nNote: __U can also use Me in PM!__"))
                 ] 
         message.answer(result) 
         return
-  try:
+  else:
      url = urllib.parse.quote(query)
      rpl = f"https://t.me/share/url?url={url}"
      rslt = f"""**Click to CopY⬇️⬇️** \n\n```{rpl}```"""
@@ -85,12 +69,7 @@ def inline(client, message):
                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Click to Try on This linK ⬆️⬆️', url=f'{rpl}')]]),
                input_message_content = InputTextMessageContent(disable_web_page_preview=0,message_text = rslt))
               ]
-  except:
-       result= [InlineQueryResultArticle(title = "Smthng went worng",
-                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔎", switch_inline_query_current_chat=""),InlineKeyboardButton("📢", switch_inline_query="")]]),
-                     description = "can't proceed ur request",
-                     input_message_content = InputTextMessageContent(disable_web_page_preview=1,message_text ="Smthng went wrong\n\nReport @b_woy"))
-                ] 
+  
   message.answer(result)
 
 bot.run()
