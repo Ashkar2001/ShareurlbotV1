@@ -66,7 +66,7 @@ def inline(client, message):
      rslt = f"""**Click to CopY⬇️⬇️** \n\n```{rpl}```"""
      result = [InlineQueryResultArticle(title = f'{query}',
                description =f'{rpl}',                        
-               reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Click to Try on This linK ⬆️⬆️', url=f'{rpl}')],InlineKeyboardButton("Search Again", switch_inline_query_current_chat=""),InlineKeyboardButton("Go Inline", switch_inline_query="")]]),
+               reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Click to Try on This linK ⬆️⬆️', url=f'{rpl}')], [InlineKeyboardButton("Search Again", switch_inline_query_current_chat=""),InlineKeyboardButton("Go Inline", switch_inline_query="")]]),
                input_message_content = InputTextMessageContent(message_text = rslt))
               ]
   
