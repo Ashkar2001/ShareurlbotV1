@@ -13,12 +13,13 @@ git clone https://github.com/ashkar2001/shareurlbotv1
 cd shareurlbotv1
 ```
 
-Install dependencies
+Install dependencies:
 
-```sh
+```
 pip3 install -r requirements.txt
 ```
-Create config.py file with required variables
+Create config.py file with required variables.
+
 Example:
 ```python 3
 class Config:
@@ -26,7 +27,7 @@ class Config:
     API_ID = 1234567
     API_HASH = "36de51fd24d20Byj9zq60eJ8F0"
 ```
-Run the bot
-```python 3
+Run the bot:
+```
 python3 main.py
 ```
