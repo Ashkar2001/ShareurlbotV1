@@ -34,9 +34,9 @@ Create config.py file with required variables.
 Example:
 ```python 3
 class Config:
-    BOT_TOKEN = "1242918832:AAFQhNnkmx61J-VfMaQBG78oXLAIg12K958"
+    BOT_TOKEN = "1242918832:AAFQhNnkmx61J-36de51fd24d20Byj9zq60"
     API_ID = 1234567
-    API_HASH = "36de51fd24d20Byj9zq60eJ8F0"
+    API_HASH = "eVfMaQBG78oXLAIg12K958J8F0"
 ```
 Run the bot:
 ```
