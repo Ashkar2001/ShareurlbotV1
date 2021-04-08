@@ -42,7 +42,7 @@ python3 main.py
 ```
 
 ## Configs
-* `BOT_TOKEN` Your bot token from @BotFather
+* `BOT_TOKEN` Your bot token from [@BotFather](https://t.me/BotFather)
 * `API_ID` Your API ID from my.telegram.org
 * `API_HASH` Your API Hash from my.telegram.org
 
