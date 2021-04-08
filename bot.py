@@ -13,7 +13,7 @@ bot = Client(
 
 @bot.on_message(filters.command(['start']))
 def start(client, message):
-    rep = f"**Hi {message.from_user.username}**\n\n__Am a bot to convert text into Shareable telegram link.__\nWorks on both **in pm and in Inline😊**\n\nClick __/help__ if needed.."
+    rep = f"**Hi {message.from_user.username}**\n\n**Am a bot to convert __text into Shareable telegram link__.**\nWorks on both **in pm and in Inline😊**\n\nClick __/help__ if needed.."
     message.reply_text(
         text=rep, 
         quote=False,
@@ -37,7 +37,7 @@ def about(client, message):
 **Name** :- `{message.from_user.first_name} {message.from_user.last_name}`
 **ID** :- `{message.from_user.id}`
 **Username** :- @{message.from_user.username}
-**DC ID** :- `{message.from_user.dc_id}`""")
+**DC ID** :- `{message.from_user.dc_id}`""", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('SOURCE', url = 'https://github.com/ashkar2001')]]))
 
 
 @bot.on_message(filters.text)
