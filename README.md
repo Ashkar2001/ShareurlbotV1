@@ -1,6 +1,12 @@
-# shareurlbotv1
-https://heroku.com/deploy?template=https://github.com/ashkar2001/shareurlbotv1
+# ShareURLbotV1 😋
+A Telegram bot to convert Text as a shareable text link format..🤗
 
+## Features
+
+- Easy Accessible
+- Works in Chat and in Inline
+- Supports emoji
+- Compatible
 
 ## Installation
 
