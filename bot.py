@@ -13,7 +13,7 @@ bot = Client(
 
 @bot.on_message(filters.command(['start']))
 def start(client, message):
-    rep = f"**Hi {message.from_user.username}**\n\nAm a bot to __convert text into Shareable telegram link__.\nWorks on both **pm and in Inline😊**\n\nClick /help if needed.."
+    rep = f"**Hi {message.from_user.username}**\n\n__Am a bot to convert text into Shareable telegram link.__\nWorks on both **in pm and in Inline😊**\n\nClick __/help__ if needed.."
     message.reply_text(
         text=rep, 
         quote=False,
@@ -45,7 +45,7 @@ def shareurl(client, message):
     query = message.text
     url = urllib.parse.quote(query)
     rpl = f"https://t.me/share/url?url={url}"
-    rslt = f"""**Click to CopY⬇️⬇️** \n\n```{rpl}```"""
+    rslt = f"""**Click to CopY ⬇️⬇️** \n\n```{rpl}```"""
     message.reply_text(text=rslt, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Click to Try on This Link ⬆️⬆️', url=f'{rpl}')]]))
 
 @bot.on_inline_query()
