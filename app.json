@@ -7,7 +7,7 @@
   ],
   "repository": "https://github.com/ashkar2001/shareurlbotv1",
   "success_url": "https://t.me/shareurlbot",
-  "website": "https://github.com/ashkar2001/shareurlbotv1",
+  "website": "https://t.me/shareurlbotv1",
   "env": {
         "API_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
         "API_HASH": {"description": "Get this value from https://my.telegram.org" , "required": true},
