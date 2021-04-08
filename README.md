@@ -46,7 +46,7 @@ python3 main.py
 * `API_ID` Your API ID from my.telegram.org
 * `API_HASH` Your API Hash from my.telegram.org
 
-### License
+## License
 Code released under [MIT License](LICENSE).
 
-### Thanks to [Pyrogram](https://github.com/pyrogram/pyrogram)
+## Thanks to [Pyrogram](https://github.com/pyrogram/pyrogram)
