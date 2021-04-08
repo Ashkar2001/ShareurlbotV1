@@ -15,7 +15,7 @@ cd shareurlbotv1
 
 Install dependencies
 
-```
+```sh
 pip3 install -r requirements.txt
 ```
 Create config.py file with required variables
