@@ -17,11 +17,11 @@ def start(client, message):
     message.reply_text(
         text=rep, 
         quote=False,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('SOURCE', url='https://github.com/ashkar2001')],[InlineKeyboardButton("Search Here", switch_inline_query_current_chat=""),InlineKeyboardButton("Go Inline", switch_inline_query="")]]))
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('SOURCE', url='https://github.com/ashkar2001/shareurlbotv1')],[InlineKeyboardButton("Search Here", switch_inline_query_current_chat=""),InlineKeyboardButton("Go Inline", switch_inline_query="")], [InlineKeyboardButton('Share Me', url='https://t.me/share/url?url=%2A%2AHello%20Plox%20%F0%9F%91%8B%2A%2A%0A%0A__I%20just%20found%20a%20Bot%20to%20convert__%20%2A%2AText%20as%20a%20Shareable%20Text%20Link%2A%2A%20__format%20%F0%9F%A4%A9.%20Hope%20it%20would%20be%20very%20helpful%20for%20u%20too...%F0%9F%A4%97%F0%9F%A4%97__%0A%0A%2A%2ABot%20Link%3A%20%40ShareUrlBot%20%F0%9F%A5%B0%2A%2A')]]))
 
 @bot.on_message(filters.command(['help']))
 def help(client, message):
-    message.reply_text("**Nothing Complicated..🤓**\n\n**For PM:**\n__Send your desired text to this bot to get your link.__\n\n**For Inline Method:**\n__Type__  `@ShareUrlBot your text`\n__in any chats keyboard and hit the inline result.__")
+    message.reply_text("**Nothing Complicated..🤓**\n\n**For PM:**\n__Send your desired text to this bot to get your link.__\n\n**For Inline Method:**\n__Type__  `@ShareUrlBot your text`\n__in any chats keyboard and hit the inline result.__", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('SOURCE', url='https://github.com/ashkar2001/shareurlbotv1')]]))
 
 @bot.on_message(filters.command(['about']))
 def about(client, message):
@@ -37,7 +37,7 @@ def about(client, message):
 **Name** :- `{message.from_user.first_name} {message.from_user.last_name}`
 **ID** :- `{message.from_user.id}`
 **Username** :- @{message.from_user.username}
-**DC ID** :- `{message.from_user.dc_id}`""", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('SOURCE', url = 'https://github.com/ashkar2001')]]))
+**DC ID** :- `{message.from_user.dc_id}`""", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('SOURCE', url = 'https://github.com/ashkar2001/shareurlbotv1')]]))
 
 
 @bot.on_message(filters.text)
