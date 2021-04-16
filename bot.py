@@ -52,9 +52,9 @@ def shareurl(client, message):
 def inline(client, message): 
   query = message.query.lower()
   if query == "":
-        result= [InlineQueryResultArticle(title = "How to use Meh!!",
+        result= [InlineQueryResultArticle(title = "Help !!",
                      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Search Here", switch_inline_query_current_chat=""),InlineKeyboardButton("Go Inline", switch_inline_query="")]]),
-                     description ="Help !!",
+                     description ="How t0 usE meH !!",
                      thumb_url="https://telegra.ph/file/99d8f16a777c2ee2781c1.jpg",
                      input_message_content = InputTextMessageContent(message_text ="**Nothing Complicated..**🤓\n\nType `@ShareUrlBot your text` \nin any chats keyboard and hit the inline result.\n\nNote: __U can also use Me in PM!__"))
                 ] 
